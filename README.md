@@ -1,55 +1,72 @@
-# SchoolProject
-## Опис проекту
+# SchoolProject — School Cleanup Map
 
-Цей проект створено для підтримки ініціативи збереження чистоти в місті. Це веб-сайт для школи, на якому учні та мешканці можуть:
+## Project overview
 
-- Визначати місця для викидання сміття у місті.
-- Логінитися, щоб додавати нові точки.
-- Відмічати, що вони викинули сміття в певному місці, ставлячи лайки.
+SchoolProject is a lightweight web application designed to help schools and local communities keep their city cleaner. Users can mark and share public locations where litter has been collected, helping volunteers and students coordinate cleanup efforts.
 
-## Основні функції
-1. **Карта точок викидання сміття:**
-   - Інтерактивна карта, де можна переглядати вже створені точки.
-   - Додавати нові точки викидання.
+Key ideas:
+- Map public litter-collection points.
+- Allow registered users to add new points.
+- Let users confirm they cleaned a location by "liking" a point.
 
-2. **Система користувачів:**
-   - Реєстрація та вхід для користувачів.
-   - Ведення статистики для кожного користувача.
+## Features
+- Interactive map showing marked cleanup points.
+- Add new points with a short description or photo.
+- User accounts: register and sign in to contribute and track activity.
+- Likes / confirmations to show which points have been cleaned most recently.
+- Basic user statistics and history.
 
-3. **Лайки:**
-   - Користувачі можуть ставити лайки у точках, де вони викинули сміття.
-   - Відображення кількості лайків у кожній точці.
+## Tech stack
+- Frontend: HTML, CSS, JavaScript (can integrate React or another modern framework)
+- Backend: Node.js with Express
+- Database: MongoDB or PostgreSQL
+- Maps: Google Maps API or OpenStreetMap
 
-## Технології
-- **Frontend:** HTML, CSS, JavaScript, React (або інший сучасний фреймворк).
-- **Backend:** Node.js, Express.
-- **База даних:** MongoDB або PostgreSQL.
-- **Картографія:** API Google Maps або OpenStreetMap.
+## Quick start
 
-## Установка
-1. Клонувати репозиторій:
-   ```
-   git clone https://github.com/Ivan22032009/SchoolProject.git
-   ```
+1. Clone the repository:
+```bash
+git clone https://github.com/Ivan22032009/SchoolProject.git
+```
 
-2. Перейти в каталог проекту:
-   ```bash
-   cd school-cleanup-map
-   ```
+2. Change into the project directory:
+```bash
+cd SchoolProject
+```
 
-3. Встановити залежності:
-   ```bash
-   npm install
-   ```
+3. Install dependencies:
+```bash
+npm install
+```
 
-4. Запустити проект:
-   ```bash
-   npm start
-   ```
+4. Set required environment variables (example):
+```bash
+export NODE_ENV=development
+export MONGODB_URI="your-database-uri"
+export MAPS_API_KEY="your-google-maps-api-key"
+```
 
-## Як допомогти проекту
-- Додавати ідеї у Issues на GitHub.
-- Вносити пропозиції щодо поліпшення функціоналу.
-- Виправляти помилки та створювати Pull Requests.
+5. Start the app:
+```bash
+npm start
+```
 
-### Дякуємо за підтримку! Разом зробимо наше місто чистішим!
+Open http://localhost:3000 (or the port configured in your app) in your browser.
+
+## Contributing
+We welcome contributions! Ways to help:
+- Open Issues to suggest new features or report bugs.
+- Send Pull Requests with improvements or fixes.
+- Improve documentation, translations, and accessibility.
+
+When contributing, please:
+- Create a clear PR description.
+- Keep changes small and focused.
+- Run and test locally before submitting.
+
+## Notes
+- The original README content was in Ukrainian and has been translated and improved.
+- This project is intended as a lightweight school/community tool; feel free to adapt the stack and deployment to your needs.
+
+## Thank you
+Thanks for supporting cleaner communities — together we can make our city cleaner and safer!

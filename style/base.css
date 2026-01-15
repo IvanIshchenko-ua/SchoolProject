@@ -1,0 +1,513 @@
+/* base.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f2f8f2;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+  }
+  /* Загальні стилі для навігації */
+  nav {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    top: 0;
+    z-index: 1000;
+  }
+  .logo img {
+    width: 210px;
+    height: 71px;
+  }
+
+  .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  background-color: #1f5f32;
+  color: #fff !important;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.nav-links .userNav {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  background-color: #164925; /* Ще темніший відтінок зеленого */
+  color: white;
+}
+
+nav a {
+  margin-right: 1.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #4CAF50;
+}
+.cabinetLink {
+  display: none; /* Приховано за замовчуванням */
+}
+
+  .authButton {
+    background: rgb(72,230,47);
+    background: linear-gradient(90deg, rgba(72,230,47,0) 0%, rgba(32,230,227,1) 100%); /* Темніший зелений */
+    color: #fff !important; 
+    padding: 8px 16px; 
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  .authButton:hover {
+    transform: scale(1.1);
+    background: rgb(32,230,227);
+background: linear-gradient(90deg, rgba(32,230,227,1) 0%, rgba(4,255,0,0) 100%);
+  }
+  /* Футер */
+  footer {
+    background: linear-gradient(to right, #3da657, #87CEEB);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    font-size: 1em;
+  }
+  .footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  /* Базові сітки і секції */
+  .section {
+    max-width: 1175px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.section h2 {
+    color: #2d8442;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.section h2:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #3da657;
+    margin: 10px auto;
+}
+
+
+.section h1 {
+  color: #2d8442;
+  font-size: 1.8rem;
+  text-align: center;
+  position: relative;
+}
+
+.section h1:after {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #3da657;
+  margin: 10px auto;
+}
+
+  /* Інші загальні стилі (наприклад, для сіток, загальних кнопок, форм) */
+  .menu-container {
+    background-color: #66cccc; /* Можна змінити на потрібний відтінок */
+    padding: 10px 0;
+}
+.menu-bg {
+  /* Наприклад, якщо треба тінь або додаткова стилізація */
+  /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+}
+/* Обгортка основного меню */
+.menu-primary-menu-container {
+  max-width: 1400px; /* Задайте потрібну ширину контейнера */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* Скидаємо відступи списків, робимо меню горизонтальним */
+.menu-primary-menu-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  align-items: center;
+  justify-content: center; /* або center / space-around, залежно від бажаного розташування */
+  gap: 30px; /* Відстань між пунктами меню */
+}
+/* Кожен пункт меню */
+.menu-primary-menu-container li {
+  position: relative; /* Потрібно для абсолютного позиціонування підменю */
+}
+/* Посилання у меню */
+.menu-primary-menu-container li a {
+  color: #fff; /* Білий текст */
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+/* Ефект при наведенні на пункт меню */
+.menu-primary-menu-container li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Підменю (список) за замовчуванням приховане */
+.menu-primary-menu-container .sub-menu {
+  display: none;
+  position: absolute; 
+  top: 100%; /* Нижче основного пункту */
+  left: 0;
+  background-color: #66cccc; /* Тло підменю (той же колір або інший) */
+  min-width: 300px; /* Мінімальна ширина підменю */
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  z-index: 9999; /* Щоб перекривати інші елементи */
+}
+
+/* Відображати підменю при наведенні на батьківський пункт */
+.menu-primary-menu-container li:hover > .sub-menu {
+  display: block;
+}
+
+/* Стилі для пунктів у підменю */
+.menu-primary-menu-container .sub-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #fff; /* Білий текст */
+  border-radius: 0;
+}
+
+/* Ефект при наведенні на пункт підменю */
+.menu-primary-menu-container .sub-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Приклад стилю для span.arrow, якщо потрібно якось виділити стрілку або текст */
+.menu-primary-menu-container .arrow {
+  /* Наприклад, щоб додати відступ чи іконку стрілочки */
+  /* padding-right: 5px; */
+  /* position: relative; */
+}
+.menu-container {
+  margin-top: 0;  /* Скиньте до нуля */
+  /* або, якщо треба, padding-top: 0; */
+}
+
+#profileSection {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+#logoutBtn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#logoutBtn:hover {
+  background-color: #c0392b;
+}
+#userNav {
+  display: none; /* Початково прихований */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: #2d8442; /* Колір фону, як у кнопок навігації */
+  cursor: default; /* Вимкнути курсор, щоб не виглядало як посилання */
+}
+.mission-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+}
+
+.mission-card h3 {
+  color: #1f5f32;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mission-card{
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-top: 2rem;
+  padding: 1.5rem;
+}
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-modal img {
+  max-width: 100vw;
+  max-height: 100vh;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.image-modal .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+.cta-button {
+  background-color: #1f5f32; /* Темніший зелений */
+  color: #fff !important; 
+}
+.cta-button:hover {
+  background-color: #164925;
+}
+.leaderboard-table th {
+  background-color: #1f5f32;
+  color: #fff;
+}
+.menu-primary-menu-container li a {
+  color: #1f5f32 !important; /* Темний текст на світлому фоні */
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8px 16px;
+}
+.menu-primary-menu-container li a:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (max-width: 768px) {
+  /* Робимо всі кнопки класу .cta-button, .authButton, .cabinetLink адаптивними */
+  .cta-button,
+  .authButton,
+  .cabinetLink {
+    display: block;         /* Робимо кнопку блоковою, щоб займати всю ширину */
+    width: 90%;             /* Займають 90% ширини екрану */
+    margin: 10px auto;      /* Відступи зверху/знизу та центрування */
+    padding: 15px;          /* Збільшені внутрішні відступи для зручності тапу */
+    font-size: 1.2rem;      /* Збільшений розмір шрифту для кращої читабельності */
+    text-align: center;
+  }
+
+  /* Якщо навігаційні кнопки розташовані в контейнері, можна зробити їх вертикальними */
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+}
+.menu-item a {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Відстань між іконкою і текстом */
+}
+
+.menu-item i {
+  font-size: 1.2em; /* Розмір іконки */
+  color: #3da657; /* Колір іконки */
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: right 0.4s ease-in-out;
+}
+
+.mobile-menu.active {
+  display: block;
+  right: 0;
+}
+
+#close-menu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #3da657;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#close-menu:hover {
+  color: #2d8442;
+  transform: rotate(90deg);
+}
+
+.mobile-menu-list {
+  list-style: none;
+  padding: 60px 20px 20px;
+  margin: 0;
+}
+
+.mobile-menu-list li {
+  margin-bottom: 20px;
+}
+
+.mobile-menu-list a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #3da657 0%, #3da657 0%, transparent 0%);
+  background-size: 200% 100%;
+  background-position: right;
+  transition: all 0.4s ease;
+}
+
+.mobile-menu-list a:hover {
+  color: #fff;
+  background: linear-gradient(to right, #3da657 50%, #2d8442 100%);
+  background-size: 200% 100%;
+  background-position: left;
+}
+
+.mobile-menu-list a.login {
+  color: #3da657;
+  border: 2px solid #3da657;
+  text-align: center;
+}
+
+.mobile-menu-list a.login:hover {
+  color: #fff;
+  background: #3da657;
+  border-color: #2d8442;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.mobile-menu-list li {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slideInLeft 0.3s ease forwards;
+}
+
+.mobile-menu-list li:nth-child(1) { animation-delay: 0.1s; }
+.mobile-menu-list li:nth-child(2) { animation-delay: 0.2s; }
+.mobile-menu-list li:nth-child(3) { animation-delay: 0.3s; }
+.mobile-menu-list li:nth-child(4) { animation-delay: 0.4s; }
+.mobile-menu-list li:nth-child(5) { animation-delay: 0.5s; }
+.mobile-menu-list li:nth-child(6) { animation-delay: 0.6s; }
+.mobile-menu-list li:nth-child(7) { animation-delay: 0.7s; }
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+  .menu-container{
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
